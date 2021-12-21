@@ -1,11 +1,14 @@
 # frozen_string_literal: true
 
 require_relative 'rails_cookie_consent/version'
-require_relative 'rails_cookie_consent/engine' if defined?(::Rails)
 require 'ostruct' # for older ruby versions
 
 module RailsCookieConsent
   class Error < StandardError; end
+
+  if defined?(::Rails)
+    require_relative 'rails_cookie_consent/engine'
+  end
 
   class << self
     DEFAULT_CONFIG = {
