@@ -23,11 +23,11 @@ module RailsCookieConsent
       hide_from_bots: false,
       remove_cookie_tables: false,
       cookie_name: 'cc_cookie',
-      cookie_expiration: 182,
-      cookie_necessary_only_expiration: 182,
+      cookie_expiration: 182, # days
+      cookie_necessary_only_expiration: 182, # days
       cookie_path: '/',
       cookie_same_site: 'Lax',
-      use_rfc_cookie: true
+      cookie_types: [] # { value: 'necessary', enabled: true, readonly: false }
     }
 
     def config
@@ -71,6 +71,25 @@ module RailsCookieConsent
 
       locales
     end
-  end
 
+    def generate_blocks(locale)
+      result = []
+
+      RailsCookieConsent.config.cookie_types.each do |cookie_type|
+        type = cookie_type[:value]
+
+        hash = {
+          title: I18n.t("rails_cookie_consent.cookie_types.#{type}.title"),
+          description: I18n.t("rails_cookie_consent.cookie_types.#{type}.description"),
+          toggle: cookie_type
+        }
+        cookie_table = Array(I18n.t("rails_cookie_consent.cookie_types.#{type}.cookie_table"))
+        hash[:cookie_table] = cookie_table
+
+        result << hash
+      end
+
+      result
+    end
+  end
 end

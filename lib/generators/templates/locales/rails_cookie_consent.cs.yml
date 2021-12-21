@@ -23,6 +23,10 @@ cs:
       - col3: Kdo má přístup
       - col4: Popis
       - col5: Bezpečnost
+    cookie_types:
+      necessary:
+        title: TODO
+        description: TODO
     blocks:
       - title: Nezbytné cookies
         description: Jedná se o nezbytné cookies.

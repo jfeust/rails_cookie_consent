@@ -1,4 +1,4 @@
-// precompile number: 9
+// precompile number: 10
 
 window.addEventListener('load', function () {
   var cc = initCookieConsent();
@@ -20,7 +20,7 @@ window.addEventListener('load', function () {
     // cookie_domain: location.hostname,       // default: current domain
     cookie_path: '<%= raw RailsCookieConsent.config.cookie_path %>', // default: root
     cookie_same_site: '<%= raw RailsCookieConsent.config.cookie_same_site %>', // default: 'Lax'
-    use_rfc_cookie: JSON.parse('<%= RailsCookieConsent.config.use_rfc_cookie %>'), // default: true
+    use_rfc_cookie: true,
     revision: parseInt('<%= RailsCookieConsent.config.revision %>'), // default: 0
 
     onFirstAction: function (user_preferences, cookie) {
