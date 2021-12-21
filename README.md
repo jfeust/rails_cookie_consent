@@ -1,8 +1,6 @@
 # RailsCookieConsent
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rails_cookie_consent`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem use https://github.com/orestbida/cookieconsent library.
 
 ## Installation
 
@@ -20,11 +18,51 @@ Or install it yourself as:
 
     $ gem install rails_cookie_consent
 
+
+Add this to your `application.css`
+
+    *= require rails_cookie_consent
+
+Add this to your `application.js`
+
+    #= require rails_cookie_consent
+
+Or add these lines to your view
+
+    = stylesheet_link_tag 'rails_cookie_consent'
+    = javascript_include_tag 'rails_cookie_consent'
+
+### Generate cookie translations
+
+    rails generate rails_cookie_consent
+
+This will generate translation files to you `config/locales`.
+
 ## Usage
 
-TODO: Write usage instructions here
+You can configure gem through initializer
+
+```ruby
+RailsCookieConsent.configure do |config|
+    # check RailsCookieConsent::DEFAULT_CONFIG for options
+end
+```
+
+All cookies are specified through generated YAML files. You can specify new cookies through `blocks:` key.
+
+
+Use `cookie_consent_link` helper generate link to cookie setting in view:
+
+    = cookie_consent_link class: 'btn'
+
+
 
 ## Development
+
+### Upgrading cookieconsent library.
+1. Upgrade assets with new version from https://github.com/orestbida/cookieconsent
+2. Update VERSIONS in `lib/rails_cookie_consent/version.rb`
+3. Push new version.
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
@@ -32,7 +70,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/rails_cookie_consent.
+Bug reports and pull requests are welcome on Gitlab at https://gitlab.railsformers.com/railsformers/rails_cookie_consent.
 
 ## License
 

@@ -14,20 +14,20 @@ module RailsCookieConsent
     DEFAULT_CONFIG = {
       revision: 0,
       force_consent: true,
-      autoclear_cookies: false,               # default: false
-      theme_css: '',                          # replace with a valid path
-      page_scripts: true,                     # default: false
-      delay: 0,                               # default: 0
-      auto_language: '',                      # default: null; could also be 'browser' or 'document'
-      autorun: true,                          # default: true
-      hide_from_bots: false,                  # default: false
-      remove_cookie_tables: false,            # default: false
-      cookie_name: 'cc_cookie',               # default: 'cc_cookie'
-      cookie_expiration: 182,                 # default: 182 (days)
-      cookie_necessary_only_expiration: 182,  # default: disabled
-      cookie_path: '/',                       # default: root
-      cookie_same_site: 'Lax',                # default: 'Lax'
-      use_rfc_cookie: false                   # default: false
+      autoclear_cookies: false,
+      theme_css: '',
+      page_scripts: true,
+      delay: 0,
+      auto_language: '',
+      autorun: true,
+      hide_from_bots: false,
+      remove_cookie_tables: false,
+      cookie_name: 'cc_cookie',
+      cookie_expiration: 182,
+      cookie_necessary_only_expiration: 182,
+      cookie_path: '/',
+      cookie_same_site: 'Lax',
+      use_rfc_cookie: true
     }
 
     def config
