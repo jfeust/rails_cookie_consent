@@ -36,6 +36,6 @@ window.addEventListener('load', function () {
       // callback triggered when user changes preferences after consent has already been given
     },
 
-    languages: JSON.parse('<%= RailsCookieConsent::Config.languages_config.to_json %>'),
+    languages: JSON.parse('<%= RailsCookieConsent.languages_config.to_json %>'),
   });
 });
