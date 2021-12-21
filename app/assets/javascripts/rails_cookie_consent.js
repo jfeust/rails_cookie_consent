@@ -1,2 +1,2 @@
-//= require cookieconsent
-//= require cookieconsent_init
+//= require ./cookieconsent.js
+// require ./cookieconsent_init.js
