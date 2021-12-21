@@ -1,30 +1,28 @@
-// precompile number: 2
+// precompile number: 3
 
-window.addEventListener("load", function () {
+window.addEventListener('load', function () {
   var cc = initCookieConsent();
 
   cc.run({
     revision: 0,
-    current_lang: document.querySelector("html").lang || '<%= I18n.default_locale %>',
-    force_consent: true,
-    autoclear_cookies: true, // default: false
-    theme_css: "", // replace with a valid path
-    page_scripts: true, // default: false
-
-    // delay: 0,                               // default: 0
-    // auto_language: '',                      // default: null; could also be 'browser' or 'document'
-    // autorun: true,                          // default: true
-    // force_consent: false,                   // default: false
-    // hide_from_bots: false,                  // default: false
-    // remove_cookie_tables: false             // default: false
-    // cookie_name: 'cc_cookie',               // default: 'cc_cookie'
-    // cookie_expiration: 182,                 // default: 182 (days)
-    // cookie_necessary_only_expiration: 182   // default: disabled
+    current_lang: document.querySelector('html').lang || '<%= I18n.default_locale %>',
+    force_consent: '<%= RailsCookieConsent.config.force_consent %>' === 'true',
+    autoclear_cookies: JSON.parse('<%= RailsCookieConsent.config.autoclear_cookies %>'), // default: false
+    theme_css: '<%= RailsCookieConsent.config.theme_css %>', // replace with a valid path
+    page_scripts: JSON.parse('<%= RailsCookieConsent.config.page_scripts %>'), // default: false
+    delay: parseInt('<%= RailsCookieConsent.config.delay %>'), // default: 0
+    auto_language: '',                      // default: null; could also be 'browser' or 'document'
+    autorun: JSON.parse('<%= RailsCookieConsent.config.autorun %>'), // default: true
+    hide_from_bots: JSON.parse('<%= RailsCookieConsent.config.hide_from_bots %>'), // default: false
+    remove_cookie_tables: JSON.parse('<%= RailsCookieConsent.config.remove_cookie_tables %>'), // default: false
+    cookie_name: '<%= RailsCookieConsent.config.cc_cookie %>', // default: 'cc_cookie'
+    cookie_expiration: parseInt('<%= RailsCookieConsent.config.cookie_expiration %>'), // default: 182 (days)
+    cookie_necessary_only_expiration: parseInt('<%= RailsCookieConsent.config.cookie_necessary_only_expiration %>'), // default: disabled
     // cookie_domain: location.hostname,       // default: current domain
-    // cookie_path: '/',                       // default: root
-    // cookie_same_site: 'Lax',                // default: 'Lax'
-    // use_rfc_cookie: false,                  // default: false
-    // revision: 0,                            // default: 0
+    cookie_path: '<%= raw RailsCookieConsent.config.cookie_path %>', // default: root
+    cookie_same_site: '<%= raw RailsCookieConsent.config.cookie_same_site %>', // default: 'Lax'
+    use_rfc_cookie: JSON.parse('<%= RailsCookieConsent.config.use_rfc_cookie %>'), // default: false
+    revision: parseInt('<%= RailsCookieConsent.config.revision %>'), // default: 0
 
     onFirstAction: function (user_preferences, cookie) {
       // callback triggered only once on the first accept/reject action
