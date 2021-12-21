@@ -58,7 +58,7 @@ Use `cookie_consent_link` helper generate link to cookie setting in view:
 ### Use in views and controllers
 
 This gem adds helper method `cookie_consent?(key)`. You can quickly check If user granted consent with particular consent.
-```
+```ruby
   if cookie_consent?('necessary')
     # Your logic
   end
@@ -66,7 +66,7 @@ This gem adds helper method `cookie_consent?(key)`. You can quickly check If use
 
 If you want to access this method in controller add these lines:
 
-```
+```ruby
 class ApplicationController < ActionController::Base
     include RailsCookieConsent::CookieHelper
 
