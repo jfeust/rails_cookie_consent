@@ -27,7 +27,7 @@ cs:
       - title: Nezbytné cookies
         description: Jedná se o nezbytné cookies.
         toggle:
-          value: Nezbytné
+          value: necessary
           enabled: true
           readonly: true
         cookie_table:
@@ -37,5 +37,3 @@ cs:
             col4: Doplň
             col5: Doplň
             is_regex: true
-
-

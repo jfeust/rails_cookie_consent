@@ -11,7 +11,7 @@ module RailsCookieConsent
     DEFAULT_CONFIG = {
       revision: 0,
       force_consent: true,
-      autoclear_cookies: true,                # default: false
+      autoclear_cookies: false,               # default: false
       theme_css: '',                          # replace with a valid path
       page_scripts: true,                     # default: false
       delay: 0,                               # default: 0
@@ -25,7 +25,7 @@ module RailsCookieConsent
       cookie_path: '/',                       # default: root
       cookie_same_site: 'Lax',                # default: 'Lax'
       use_rfc_cookie: false                   # default: false
-    }.freeze
+    }
 
     def config
       @config ||= OpenStruct.new(DEFAULT_CONFIG)
@@ -44,7 +44,7 @@ module RailsCookieConsent
         locales[locale] = {
           consent_modal: {
             title: I18n.t('rails_cookie_consent.title'),
-            description: I18n.t("rails_cookie_consent.description"),
+            description: I18n.t('rails_cookie_consent.description'),
             primary_btn: {
               text: I18n.t('rails_cookie_consent.primary_btn.text'),
               role: I18n.t('rails_cookie_consent.primary_btn.role'), # 'accept_selected' or 'accept_all'
