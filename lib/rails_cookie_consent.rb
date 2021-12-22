@@ -23,8 +23,8 @@ module RailsCookieConsent
       hide_from_bots: false,
       remove_cookie_tables: false,
       cookie_name: 'cc_cookie',
-      cookie_expiration: 182, # days
-      cookie_necessary_only_expiration: 182, # days
+      cookie_expiration: 365, # days
+      cookie_necessary_only_expiration: 365, # days
       cookie_path: '/',
       cookie_same_site: 'Lax',
       cookie_types: [] # { value: 'necessary', enabled: true, readonly: true, required: true }

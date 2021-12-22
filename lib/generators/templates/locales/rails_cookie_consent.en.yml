@@ -24,13 +24,13 @@ cs:
       - col4: Description
       - col5: Security
     cookie_types:
-      # # define your cookies here
-      # necessary:
-        # title: Necessary
-        # description: Necessary cookies
-        # cookie_table:
-          # - col1:
-          # - col2:
-          # - col3:
-          # - col4:
-          # - col5:
+      # define your cookies here
+      necessary:
+        title: Necessary
+        description: Necessary cookies
+        cookie_table:
+          - col1: cc_cookie
+            col2: 365 days
+            col3: Own
+            col4: Cookies preferences
+            col5: "-"

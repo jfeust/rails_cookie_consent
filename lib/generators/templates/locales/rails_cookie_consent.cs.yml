@@ -24,13 +24,13 @@ cs:
       - col4: Popis
       - col5: Bezpečnost
     cookie_types:
-      # # define your cookies here
-      # necessary:
-        # title: Nezbytné
-        # description: Nezbytné cookie
-        # cookie_table:
-          # - col1:
-          # - col2:
-          # - col3:
-          # - col4:
-          # - col5:
+      # define your cookies here
+      necessary:
+        title: Nezbytné
+        description: Nezbytné cookies
+        cookie_table:
+          - col1: cc_cookie
+            col2: 365 dní
+            col3: Vlastní
+            col4: Uložení preferencí cookies
+            col5: "-"
