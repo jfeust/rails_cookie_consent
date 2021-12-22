@@ -45,7 +45,28 @@ You can configure gem through initializer
 ```ruby
 RailsCookieConsent.configure do |config|
     # check RailsCookieConsent::DEFAULT_CONFIG for options
+    config.cookie_types = [
+      { value: 'necessary', readonly: true, required: true  },
+      { value: 'required', readonly: false, required: false }
+    ]
 end
+```
+
+In translations then:
+
+```yaml
+  # ...
+  cookie_types:
+      necessary:
+        title: Necessary
+        description: Desc
+      required:
+        title: Required
+        description: Desc
+        cookie_table:
+          - col1: Val
+            col2: Second val
+
 ```
 
 All cookies are specified through generated YAML files. You can specify new cookies through `blocks:` key.
