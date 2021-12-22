@@ -32,9 +32,14 @@ Or add these lines to your view
     = stylesheet_link_tag 'rails_cookie_consent'
     = javascript_include_tag 'rails_cookie_consent'
 
-### Generate cookie translations
+### Force recompilation
 
-    rails generate rails_cookie_consent
+If you change cookie files and want to force precompilation, just restart server or change `ENV['RAILS_COOKIE_CONSENT_PRECOMPILE']` variable.
+
+### Generate cookie translations
+```bash
+$ rails generate rails_cookie_consent
+```
 
 This will generate translation files to you `config/locales`.
 
@@ -46,8 +51,8 @@ You can configure gem through initializer
 RailsCookieConsent.configure do |config|
     # check RailsCookieConsent::DEFAULT_CONFIG for options
     config.cookie_types = [
-      { value: 'necessary', readonly: true, required: true  },
-      { value: 'required', readonly: false, required: false }
+      { value: 'necessary', readonly: true, enabled: true, required: true },
+      { value: 'required', readonly: false, enabled: false, required: false }
     ]
 end
 ```

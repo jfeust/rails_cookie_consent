@@ -27,7 +27,7 @@ module RailsCookieConsent
       cookie_necessary_only_expiration: 182, # days
       cookie_path: '/',
       cookie_same_site: 'Lax',
-      cookie_types: [] # { value: 'necessary', enabled: true, readonly: false }
+      cookie_types: [] # { value: 'necessary', enabled: true, readonly: true, required: true }
     }
 
     def config
@@ -35,6 +35,7 @@ module RailsCookieConsent
     end
 
     def configure
+      ENV['RAILS_COOKIE_CONSENT_PRECOMPILE'] ||= Time.current.iso8601.to_s
       yield(config)
     end
 
