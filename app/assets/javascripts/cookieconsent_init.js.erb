@@ -1,9 +1,9 @@
 // <%= ENV['RAILS_COOKIE_CONSENT_PRECOMPILE'] %>
 
 window.addEventListener('load', function () {
-  var cc = initCookieConsent();
+  window.cookieConsent = initCookieConsent();
 
-  cc.run({
+  window.cookieConsent.run({
     current_lang: document.querySelector('html').lang || '<%= I18n.default_locale %>',
     force_consent: '<%= RailsCookieConsent.config.force_consent %>' === 'true',
     autoclear_cookies: JSON.parse('<%= RailsCookieConsent.config.autoclear_cookies %>'), // default: false
