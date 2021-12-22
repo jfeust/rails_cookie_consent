@@ -25,9 +25,9 @@ cs:
       - col5: Bezpečnost
     cookie_types:
       # define your cookies here
-      necessary:
-        title: Nezbytné
-        description: Nezbytné cookies
+      required:
+        title: Nutné
+        description: Nutné cookies
         cookie_table:
           - col1: cc_cookie
             col2: 365 dní

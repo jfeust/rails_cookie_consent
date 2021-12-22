@@ -25,9 +25,9 @@ cs:
       - col5: Security
     cookie_types:
       # define your cookies here
-      necessary:
-        title: Necessary
-        description: Necessary cookies
+      required:
+        title: Required
+        description: Required cookies
         cookie_table:
           - col1: cc_cookie
             col2: 365 days
