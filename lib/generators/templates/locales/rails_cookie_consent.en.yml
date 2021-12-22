@@ -23,17 +23,14 @@ cs:
       - col3: Access
       - col4: Description
       - col5: Security
-    blocks:
-      - title: Necessary
-        description: Necessary cookies.
-        toggle:
-          value: necessary
-          enabled: true
-          readonly: true
-        cookie_table:
-          - col1: Fill
-            col2: Fill
-            col3: Fill
-            col4: Fill
-            col5: Fill
-            is_regex: true
+    cookie_types:
+      # # define your cookies here
+      # necessary:
+        # title: Necessary
+        # description: Necessary cookies
+        # cookie_table:
+          # - col1:
+          # - col2:
+          # - col3:
+          # - col4:
+          # - col5:
