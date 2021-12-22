@@ -24,19 +24,13 @@ cs:
       - col4: Popis
       - col5: Bezpečnost
     cookie_types:
-      necessary:
-        title: TODO
-        description: TODO
-    blocks:
-      - title: Nezbytné cookies
-        description: Jedná se o nezbytné cookies.
-        toggle:
-          value: necessary
-          enabled: true
-          readonly: true
-        cookie_table:
-          - col1: Doplň
-            col2: Doplň
-            col3: Doplň
-            col4: Doplň
-            col5: Doplň
+      # # define your cookies here
+      # necessary:
+        # title: Nezbytné
+        # description: Nezbytné cookie
+        # cookie_table:
+          # - col1:
+          # - col2:
+          # - col3:
+          # - col4:
+          # - col5:

@@ -64,7 +64,7 @@ module RailsCookieConsent
             reject_all_btn: I18n.t('rails_cookie_consent.settings_modal.reject_all_btn'),
             close_btn_label: I18n.t('rails_cookie_consent.settings_modal.close_btn_label'),
             cookie_table_headers: I18n.t('rails_cookie_consent.cookie_table_headers'),
-            blocks: I18n.t('rails_cookie_consent.blocks')
+            blocks: generate_blocks(locale)
           }
         }
       end
@@ -81,9 +81,10 @@ module RailsCookieConsent
         hash = {
           title: I18n.t("rails_cookie_consent.cookie_types.#{type}.title"),
           description: I18n.t("rails_cookie_consent.cookie_types.#{type}.description"),
-          toggle: cookie_type
+          toggle: cookie_type,
         }
-        cookie_table = Array(I18n.t("rails_cookie_consent.cookie_types.#{type}.cookie_table"))
+
+        cookie_table = Array(I18n.t("rails_cookie_consent.cookie_types.#{type}.cookie_table", default: nil))
         hash[:cookie_table] = cookie_table
 
         result << hash
