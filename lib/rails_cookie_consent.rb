@@ -43,28 +43,26 @@ module RailsCookieConsent
       locales = {}
 
       I18n.available_locales.each do |locale|
-        I18n.locale = locale
-
         locales[locale] = {
           consent_modal: {
-            title: I18n.t('rails_cookie_consent.title'),
-            description: I18n.t('rails_cookie_consent.description'),
+            title: I18n.t('rails_cookie_consent.title', locale: locale),
+            description: I18n.t('rails_cookie_consent.description', locale: locale),
             primary_btn: {
-              text: I18n.t('rails_cookie_consent.primary_btn.text'),
-              role: I18n.t('rails_cookie_consent.primary_btn.role'), # 'accept_selected' or 'accept_all'
+              text: I18n.t('rails_cookie_consent.primary_btn.text', locale: locale),
+              role: I18n.t('rails_cookie_consent.primary_btn.role', locale: locale), # 'accept_selected' or 'accept_all'
             },
             secondary_btn: {
-              text: I18n.t('rails_cookie_consent.secondary_btn.text'),
-              role: I18n.t('rails_cookie_consent.secondary_btn.role'), # 'accept_selected' or 'accept_all'
+              text: I18n.t('rails_cookie_consent.secondary_btn.text', locale: locale),
+              role: I18n.t('rails_cookie_consent.secondary_btn.role', locale: locale), # 'accept_selected' or 'accept_all'
             }
           },
           settings_modal: {
-            title: I18n.t('rails_cookie_consent.settings_modal.title'),
-            save_settings_btn: I18n.t('rails_cookie_consent.settings_modal.save_settings_btn'),
-            accept_all_btn: I18n.t('rails_cookie_consent.settings_modal.accept_all_btn'),
-            reject_all_btn: I18n.t('rails_cookie_consent.settings_modal.reject_all_btn'),
-            close_btn_label: I18n.t('rails_cookie_consent.settings_modal.close_btn_label'),
-            cookie_table_headers: I18n.t('rails_cookie_consent.cookie_table_headers'),
+            title: I18n.t('rails_cookie_consent.settings_modal.title', locale: locale),
+            save_settings_btn: I18n.t('rails_cookie_consent.settings_modal.save_settings_btn', locale: locale),
+            accept_all_btn: I18n.t('rails_cookie_consent.settings_modal.accept_all_btn', locale: locale),
+            reject_all_btn: I18n.t('rails_cookie_consent.settings_modal.reject_all_btn', locale: locale),
+            close_btn_label: I18n.t('rails_cookie_consent.settings_modal.close_btn_label', locale: locale),
+            cookie_table_headers: I18n.t('rails_cookie_consent.cookie_table_headers', locale: locale),
             blocks: generate_blocks(locale)
           }
         }
@@ -80,12 +78,12 @@ module RailsCookieConsent
         type = cookie_type[:value]
 
         hash = {
-          title: I18n.t("rails_cookie_consent.cookie_types.#{type}.title"),
-          description: I18n.t("rails_cookie_consent.cookie_types.#{type}.description"),
+          title: I18n.t("rails_cookie_consent.cookie_types.#{type}.title", locale: locale),
+          description: I18n.t("rails_cookie_consent.cookie_types.#{type}.description", locale: locale),
           toggle: cookie_type,
         }
 
-        cookie_table = Array(I18n.t("rails_cookie_consent.cookie_types.#{type}.cookie_table", default: nil))
+        cookie_table = Array(I18n.t("rails_cookie_consent.cookie_types.#{type}.cookie_table", default: nil, locale: locale))
         hash[:cookie_table] = cookie_table
 
         result << hash

@@ -100,6 +100,10 @@ class ApplicationController < ActionController::Base
 end
 ```
 
+### Styles
+
+You can change styles by creating css file `rails_cookie_consent_theme.css`. Check https://github.com/orestbida/cookieconsent/blob/master/src/cookieconsent.css for options.
+
 ## Development
 
 ### Upgrading cookieconsent library.
