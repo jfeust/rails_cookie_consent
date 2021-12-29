@@ -72,7 +72,7 @@ module RailsCookieConsent
     end
 
     def generate_blocks(locale)
-      result = [{ title: I18n.t('rails_cookie_consent.settings_modal.general_title'), description: I18n.t('rails_cookie_consent.settings_modal.general_description') }]
+      result = [{ title: I18n.t('rails_cookie_consent.settings_modal.general_title', locale: locale), description: I18n.t('rails_cookie_consent.settings_modal.general_description', locale: locale) }]
 
       RailsCookieConsent.config.cookie_types.each do |cookie_type|
         type = cookie_type[:value]
