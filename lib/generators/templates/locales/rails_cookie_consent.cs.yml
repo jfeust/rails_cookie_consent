@@ -17,6 +17,8 @@ cs:
       accept_all_btn: Povolit vše
       reject_all_btn: Zamítnout vše
       close_btn_label: Zavřít
+      general_title: ""
+      general_description: ""
     cookie_table_headers:
       - col1: Název
       - col2: Expirace

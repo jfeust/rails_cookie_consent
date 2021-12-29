@@ -17,6 +17,8 @@ cs:
       accept_all_btn: Accept all
       reject_all_btn: Reject all
       close_btn_label: Close
+      general_title: ""
+      general_description: ""
     cookie_table_headers:
       - col1: Name
       - col2: Expiration
