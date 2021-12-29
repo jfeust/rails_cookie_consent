@@ -6,14 +6,14 @@ window.addEventListener('load', function () {
   window.cookieConsent.run({
     current_lang: document.querySelector('html').lang || '<%= I18n.default_locale %>',
     force_consent: '<%= RailsCookieConsent.config.force_consent %>' === 'true',
-    autoclear_cookies: JSON.parse('<%= RailsCookieConsent.config.autoclear_cookies %>'), // default: false
+    autoclear_cookies: '<%= RailsCookieConsent.config.autoclear_cookies %>' === 'true', // default: false
     theme_css: '<%= asset_path('rails_cookie_consent_theme') rescue RailsCookieConsent.config.theme_css %>', // replace with a valid path
-    page_scripts: JSON.parse('<%= RailsCookieConsent.config.page_scripts %>'), // default: false
+    page_scripts: '<%= RailsCookieConsent.config.page_scripts %>' === 'true', // default: false
     delay: parseInt('<%= RailsCookieConsent.config.delay %>'), // default: 0
     auto_language: '',                      // default: null; could also be 'browser' or 'document'
-    autorun: JSON.parse('<%= RailsCookieConsent.config.autorun %>'), // default: true
-    hide_from_bots: JSON.parse('<%= RailsCookieConsent.config.hide_from_bots %>'), // default: false
-    remove_cookie_tables: JSON.parse('<%= RailsCookieConsent.config.remove_cookie_tables %>'), // default: false
+    autorun: '<%= RailsCookieConsent.config.autorun %>' === 'true', // default: true
+    hide_from_bots: '<%= RailsCookieConsent.config.hide_from_bots %>' === 'true', // default: false
+    remove_cookie_tables: '<%= RailsCookieConsent.config.remove_cookie_tables %>' === 'true', // default: false
     cookie_name: '<%= RailsCookieConsent.config.cookie_name %>', // default: 'cc_cookie'
     cookie_expiration: parseInt('<%= RailsCookieConsent.config.cookie_expiration %>'), // default: 182 (days)
     cookie_necessary_only_expiration: parseInt('<%= RailsCookieConsent.config.cookie_necessary_only_expiration %>'), // default: disabled
