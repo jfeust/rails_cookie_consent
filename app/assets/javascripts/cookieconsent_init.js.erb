@@ -8,7 +8,7 @@ window.addEventListener('load', function () {
     current_lang: document.querySelector('html').lang || '<%= I18n.default_locale %>',
     force_consent: '<%= RailsCookieConsent.config.force_consent %>' === 'true',
     autoclear_cookies: '<%= RailsCookieConsent.config.autoclear_cookies %>' === 'true', // default: false
-    theme_css: '<%= asset_path('rails_cookie_consent_theme') rescue RailsCookieConsent.config.theme_css %>', // replace with a valid path
+    theme_css: '<%= RailsCookieConsent.config.enable_theme_css ? (RailsCookieConsent.config.theme_css.presence || asset_path('rails_cookie_consent_theme.css')) : '' %>', // replace with a valid path
     page_scripts: '<%= RailsCookieConsent.config.page_scripts %>' === 'true', // default: false
     delay: parseInt('<%= RailsCookieConsent.config.delay %>'), // default: 0
     auto_language: '',                      // default: null; could also be 'browser' or 'document'

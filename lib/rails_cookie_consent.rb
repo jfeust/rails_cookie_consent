@@ -15,6 +15,7 @@ module RailsCookieConsent
       revision: 0,
       force_consent: true,
       autoclear_cookies: false,
+      enable_theme_css: false,
       theme_css: '',
       page_scripts: true,
       delay: 0,
