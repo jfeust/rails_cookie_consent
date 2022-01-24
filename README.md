@@ -1,5 +1,5 @@
 # RailsCookieConsent
-[![version](https://img.shields.io/badge/version-0.4.0-brightgreen)](https://img.shields.io/badge/version-0.4.0-brightgreen)
+[![version](https://img.shields.io/badge/version-0.4.1-brightgreen)](https://img.shields.io/badge/version-0.4.0-brightgreen)
 [![cookie consent version](https://img.shields.io/badge/cookie%20consent%20version-2.8.0-informational)](https://github.com/orestbida/cookieconsent/releases/tag/v2.8.0)
 
 
@@ -10,7 +10,7 @@ This gem use https://github.com/orestbida/cookieconsent library.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'rails_cookie_consent', tag: 'v0.4.0', git: 'https://gitlab+deploy-token-14:myRsr6oAND4deno4gf5P@gitlab.railsformers.com/railsformers/rails_cookie_consent'
+gem 'rails_cookie_consent', tag: 'v0.4.1', git: 'https://gitlab+deploy-token-14:myRsr6oAND4deno4gf5P@gitlab.railsformers.com/railsformers/rails_cookie_consent'
 ```
 
 And then execute:
