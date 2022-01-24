@@ -1,5 +1,8 @@
 ## [Unreleased]
 
+## [0.4.1]
+- lower ruby requirement to >= 2.3
+
 ## [0.4.0]
 
 - bump cookie consent lib to `2.8.0`
