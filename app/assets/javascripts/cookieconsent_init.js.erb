@@ -18,7 +18,7 @@ window.addEventListener('load', function () {
     cookie_name: '<%= RailsCookieConsent.config.cookie_name %>', // default: 'cc_cookie'
     cookie_expiration: parseInt('<%= RailsCookieConsent.config.cookie_expiration %>'), // default: 182 (days)
     cookie_necessary_only_expiration: parseInt('<%= RailsCookieConsent.config.cookie_necessary_only_expiration %>'), // default: disabled
-    // cookie_domain: location.hostname,       // default: current domain
+    cookie_domain: '<%= RailsCookieConsent.config.cookie_domain %>' || location.hostname,       // default: current domain
     cookie_path: '<%= raw RailsCookieConsent.config.cookie_path %>', // default: root
     cookie_same_site: '<%= raw RailsCookieConsent.config.cookie_same_site %>', // default: 'Lax'
     use_rfc_cookie: true,

@@ -26,6 +26,7 @@ module RailsCookieConsent
       cookie_name: 'cc_cookie',
       cookie_expiration: 365, # days
       cookie_necessary_only_expiration: 365, # days
+      cookie_domain: '',
       cookie_path: '/',
       cookie_same_site: 'Lax',
       cookie_types: [] # { value: 'necessary', enabled: true, readonly: true, required: true }
