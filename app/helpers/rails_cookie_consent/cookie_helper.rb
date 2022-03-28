@@ -6,12 +6,12 @@ module RailsCookieConsent
       return false if raw_cookie_consent.blank?
 
       consent = parsed_consent
-      consent[LEVEL_KEY].present? && consent[LEVEL_KEY].include?(key.to_s)
+      consent.present? && consent[LEVEL_KEY].present? && consent[LEVEL_KEY].include?(key.to_s)
     end
 
     def consent_levels
       consent = parsed_consent
-      consent[LEVEL_KEY].presence || []
+      consent.present? && consent[LEVEL_KEY].present? ? consent[LEVEL_KEY] : []
     end
 
     def cookie_consent_link(options = {})
@@ -26,6 +26,7 @@ module RailsCookieConsent
       begin
         JSON.parse(raw_cookie_consent)
       rescue JSON::ParserError
+        cookies.delete(RailsCookieConsent.config.cookie_name) if raw_cookie_consent.present?
         nil
       end
     end

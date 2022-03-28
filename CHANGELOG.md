@@ -1,4 +1,6 @@
-## [Unreleased]
+## [0.4.3]
+- fallback delete cookie consent when unable to parse
+- handle nil parsed cookie consent in helper
 
 ## [0.4.1]
 - lower ruby requirement to >= 2.3
