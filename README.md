@@ -10,7 +10,7 @@ This gem use https://github.com/orestbida/cookieconsent library.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'rails_cookie_consent', tag: '0.4.3', git: 'https://gitlab+deploy-token-14:myRsr6oAND4deno4gf5P@gitlab.railsformers.com/railsformers/rails_cookie_consent'
+gem 'rails_cookie_consent', tag: '0.4.3', github: 'railsformers/rails_cookie_consent'
 ```
 
 And then execute:
@@ -37,7 +37,7 @@ Or add these lines to your view
 
 ### Force recompilation
 
-If you change cookie files and want to force precompilation, just restart server or change `ENV['RAILS_COOKIE_CONSENT_PRECOMPILE']` variable.
+If you change cookie files and want to force precompilation to view changes, just restart server or update `ENV['RAILS_COOKIE_CONSENT_PRECOMPILE']` variable. If this doesn't work, just change any of your precompiled assets.
 
 ### Generate cookie translations
 ```bash
