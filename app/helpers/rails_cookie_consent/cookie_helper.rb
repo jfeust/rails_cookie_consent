@@ -19,6 +19,8 @@ module RailsCookieConsent
     end
 
     def raw_cookie_consent
+      return if cookies.nil?
+
       cookies[RailsCookieConsent.config.cookie_name]
     end
 

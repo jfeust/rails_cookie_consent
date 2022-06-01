@@ -10,7 +10,7 @@ This gem use https://github.com/orestbida/cookieconsent library.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'rails_cookie_consent', tag: '0.4.3', github: 'railsformers/rails_cookie_consent'
+gem 'rails_cookie_consent', tag: '0.4.4', github: 'railsformers/rails_cookie_consent'
 ```
 
 And then execute:

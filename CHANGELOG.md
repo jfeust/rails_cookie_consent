@@ -1,3 +1,6 @@
+## [0.4.4]
+- fix bug when cookie is nil
+-
 ## [0.4.3]
 - fallback delete cookie consent when unable to parse
 - handle nil parsed cookie consent in helper
