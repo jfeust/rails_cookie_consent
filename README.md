@@ -1,5 +1,5 @@
 # RailsCookieConsent
-[![version](https://img.shields.io/badge/version-0.4.2-brightgreen)](https://img.shields.io/badge/version-0.4.0-brightgreen)
+[![version](https://img.shields.io/badge/version-0.4.4-brightgreen)](https://img.shields.io/badge/version-0.4.0-brightgreen)
 [![cookie consent version](https://img.shields.io/badge/cookie%20consent%20version-2.8.0-informational)](https://github.com/orestbida/cookieconsent/releases/tag/v2.8.0)
 
 
