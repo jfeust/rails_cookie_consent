@@ -13,6 +13,7 @@ module RailsCookieConsent
   class << self
     DEFAULT_CONFIG = {
       revision: 0,
+      listener_event_name: 'load',
       force_consent: true,
       autoclear_cookies: false,
       enable_theme_css: false,
