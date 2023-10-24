@@ -24,7 +24,15 @@ window.addEventListener('turbolinks:load', function () {
     use_rfc_cookie: true,
     gui_options: {
       consent_modal: {
-        position: 'bottom left',
+        layout: 'cloud',               // box/cloud/bar
+        position: 'bottom left',     // bottom/middle/top + left/right/center
+        transition: 'slide',           // zoom/slide
+        swap_buttons: false            // enable to invert buttons
+      },
+      settings_modal: {
+        layout: 'box',                 // box/bar
+        position: 'left',              // left/right
+        transition: 'slide'            // zoom/slide
       }
     },
     revision: parseInt('<%= RailsCookieConsent.config.revision %>'), // default: 0
