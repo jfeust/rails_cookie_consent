@@ -1,4 +1,4 @@
-cs:
+en:
   rails_cookie_consent:
     settings:
       force_consent: true
