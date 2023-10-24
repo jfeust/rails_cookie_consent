@@ -1,7 +1,7 @@
 // <%= ENV['RAILS_COOKIE_CONSENT_PRECOMPILE'] %>
 // 1
 
-window.addEventListener('<% RailsCookieConsent.config.listener_event_name %>', function () {  // default: load
+window.addEventListener('<%= RailsCookieConsent.config.listener_event_name %>', function () {  // default: load
   window.cookieConsent = initCookieConsent();
 
   window.cookieConsent.run({
