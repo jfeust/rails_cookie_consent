@@ -24,15 +24,15 @@ window.addEventListener('turbolinks:load', function () {
     use_rfc_cookie: true,
     gui_options: {
       consent_modal: {
-        layout: 'cloud',               // box/cloud/bar
-        position: 'bottom left',     // bottom/middle/top + left/right/center
-        transition: 'slide',           // zoom/slide
-        swap_buttons: false            // enable to invert buttons
+        layout: '<%= RailsCookieConsent.config.gui_options_consent_modal_layout %>' || 'box',               // box/cloud/bar
+        position: '<%= RailsCookieConsent.config.gui_options_consent_modal_position %>' || 'bottom right',     // bottom/middle/top + left/right/center
+        transition: '<%= RailsCookieConsent.config.gui_options_consent_modal_transition %>' || 'slide',           // zoom/slide
+        swap_buttons: '<%= RailsCookieConsent.config.gui_options_consent_modal_swap_buttons %>' === 'true'            // enable to invert buttons
       },
       settings_modal: {
-        layout: 'box',                 // box/bar
-        position: 'left',              // left/right
-        transition: 'slide'            // zoom/slide
+        layout: '<%= RailsCookieConsent.config.gui_options_settings_modal_layout %>' || 'box',                 // box/bar
+        position: '<%= RailsCookieConsent.config.gui_options_settings_modal_position %>' || 'left',              // left/right
+        transition: '<%= RailsCookieConsent.config.gui_options_settings_modal_transition %>' || 'slide'            // zoom/slide
       }
     },
     revision: parseInt('<%= RailsCookieConsent.config.revision %>'), // default: 0
